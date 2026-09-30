@@ -16,6 +16,10 @@ public class FactoryProvider {
             return new GoogleFactory();
         }
 
+        if (family.equalsIgnoreCase("amazon")) {
+            return new AmazonFactory();
+        }
+
         throw new IllegalArgumentException("Unknown family: " + family);
     }
 }
