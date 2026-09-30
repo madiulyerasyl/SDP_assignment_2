@@ -4,17 +4,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        DeviceCreator cameraCreator = new CameraCreator();
-        DeviceCreator lightCreator = new LightCreator();
-        DeviceCreator thermostatCreator = new ThermostatCreator();
+        SmartHomeFactory factory = new XiaomiFactory();
 
-        System.out.println("CAMERA:");
-        cameraCreator.operateDevice();
+        SmartHomeSystem system = new SmartHomeSystem(factory);
 
-        System.out.println("\nLIGHT:");
-        lightCreator.operateDevice();
-
-        System.out.println("\nTHERMOSTAT:");
-        thermostatCreator.operateDevice();
+        system.activateAwayMode();
+        system.activateEveningMode();
+        system.activateSecurityAlert();
     }
 }
