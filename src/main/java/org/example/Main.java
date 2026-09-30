@@ -13,6 +13,8 @@ public class Main {
         System.out.println("samsung");
         System.out.println("google");
         System.out.println("amazon");
+        System.out.println("apple");
+        System.out.println("philips");
 
         String family = scanner.nextLine();
 

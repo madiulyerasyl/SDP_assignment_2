@@ -20,6 +20,14 @@ public class FactoryProvider {
             return new AmazonFactory();
         }
 
+        if (family.equalsIgnoreCase("apple")) {
+            return new AppleFactory();
+        }
+
+        if (family.equalsIgnoreCase("philips")) {
+            return new PhilipsFactory();
+        }
+
         throw new IllegalArgumentException("Unknown family: " + family);
     }
 }
